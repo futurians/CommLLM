@@ -5,15 +5,30 @@ In order to work with it, you need to perform the steps described below.
 
 ## 1. Get the code and set up a virtual environment
 
-
+Clone the repo: `git clone git@github.com:futurians/CommLLM.git`
+Move to the cloned repo: `cd CommLLM`
+Create a virtualenv: `python3 -m venv venv`
+Activate the virtualenv: `source venv/bin/activate`
+Install all required packages: `pip install -r requirements.txt`
 
 ## 2. Get llama-cpp
 
-
+There are many ways to install – instructions are here: [https://github.com/ggml-org/llama.cpp/tree/master?tab=readme-ov-file#quick-start](https://github.com/ggml-org/llama.cpp/tree/master?tab=readme-ov-file#quick-start)
+(Compiling from source has been working always, instructions for that are here: [https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md))
 
 ## 3. Run a llama-server with llama-cpp
 
+This repo has been tested with two local models: Gemma 3 1B and Qwen 3 1.7B. The commands to run these models are as follows:
 
+**Gemma 3 1B**
+
+`llama-server -hf unsloth/gemma-3-1b-it-GGUF:Q4_K_M --chat-template gemma -ngl 99 --ctx-size 0 --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0`
+
+**Qwen 3 1.7B**
+
+`llama-server -hf unsloth/Qwen3-1.7B-GGUF --jinja --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0 -c 40960 -n 32768 --no-context-shift -ngl 99`
+
+Further information available in [local_models.md](./local_models.md)
 
 ## 4. Run the LLM-enhanced multi-agent system
 
