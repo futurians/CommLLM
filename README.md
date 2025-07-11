@@ -1,4 +1,25 @@
 # Large Language Model Enhanced Multi-Agent Systems for 6G Communications
+
+**This is a modified version of the original framework**
+In order to work with it, you need to perform the steps described below.
+
+## 1. Get the code and set up a virtual environment
+
+
+
+## 2. Get llama-cpp
+
+
+
+## 3. Run a llama-server with llama-cpp
+
+
+
+## 4. Run the LLM-enhanced multi-agent system
+
+
+
+
 ## Authors
 ### Feibo Jiang, Yubo Peng, Li Dong, Kezhi Wang, Kun Yang, Cunhua Pan, Dusit Niyato, and Octavia A. Dobre.
 ## Paper
