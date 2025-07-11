@@ -6,14 +6,19 @@ In order to work with it, you need to perform the steps described below.
 ## 1. Get the code and set up a virtual environment
 
 Clone the repo: `git clone git@github.com:futurians/CommLLM.git`
+
 Move to the cloned repo: `cd CommLLM`
+
 Create a virtualenv: `python3 -m venv venv`
+
 Activate the virtualenv: `source venv/bin/activate`
+
 Install all required packages: `pip install -r requirements.txt`
 
 ## 2. Get llama-cpp
 
 There are many ways to install – instructions are here: [https://github.com/ggml-org/llama.cpp/tree/master?tab=readme-ov-file#quick-start](https://github.com/ggml-org/llama.cpp/tree/master?tab=readme-ov-file#quick-start)
+
 (Compiling from source has been working always, instructions for that are here: [https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md))
 
 ## 3. Run a llama-server with llama-cpp
