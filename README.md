@@ -21,6 +21,11 @@ There are many ways to install – instructions are here: [https://github.com/gg
 
 (Compiling from source has been working always, instructions for that are here: [https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md))
 
+If you compiled `llama.cpp` from source, please perform the following actions before proceeding:
+
+- Move to the output directory (assuming you are still in the directory `llama.cpp`, where you issued the previous build commands): `cd build/bin`
+- Copy the binary to `/usr/local/bin`: `sudo cp ./llama-server /usr/local/bin/`
+
 ## 3. Run a llama-server with llama-cpp
 
 This repo has been tested with two local models: Gemma 3 1B and Qwen 3 1.7B. The commands to run these models are as follows:
